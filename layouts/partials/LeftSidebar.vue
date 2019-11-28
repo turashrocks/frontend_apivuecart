@@ -1,0 +1,99 @@
+<template>
+ <div>
+     <!--START dynamic-->
+     <v-expansion-panels>
+      <template v-for="category in categories">
+        <template v-if="category.children.length">
+          <v-expansion-panel :key="category.slug">
+            <nuxt-link
+                :to="{ name: 'categories-slug', params: { slug: category.slug } }"
+              >
+              <v-expansion-panel-header>
+                {{ category.name }}
+              </v-expansion-panel-header>
+            </nuxt-link>
+            <nuxt-link
+                        :to="{ name: 'categories-slug', params: { slug: child.slug } }"
+                        v-for="child in category.children"
+                        :key="child.slug"
+                        >
+                    <v-expansion-panel-content>
+                        {{ child.name }}
+                    </v-expansion-panel-content>
+            </nuxt-link>
+          </v-expansion-panel>
+        </template>
+        <template v-else>
+             <v-expansion-panel :key="category.slug">
+                <v-expansion-panel-header>
+                    <nuxt-link
+                    :to="{ name: 'categories-slug', params: { slug: category.slug } }"
+                    >{{ category.name }}
+                    </nuxt-link>
+                </v-expansion-panel-header>
+                <v-expansion-panel-content>
+
+                </v-expansion-panel-content>
+          </v-expansion-panel>
+          </template>
+      </template>
+      </v-expansion-panels>
+      <!--END Dynamic-->
+
+<!--<v-expansion-panels>
+      <v-expansion-panel>
+          <v-expansion-panel-header>Item 2</v-expansion-panel-header>
+          <v-expansion-panel-content>
+             <h3>Lorem</h3>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+
+        <v-expansion-panel>
+          <v-expansion-panel-header>Item 3</v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <h3>Lorem</h3>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+
+        <v-expansion-panel>
+          <v-expansion-panel-header>Item 4</v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <h3>Lorem</h3>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+
+    </v-expansion-panels>-->
+ </div>
+</template>
+
+<!--<script>
+  //import { mapGetters } from 'vuex'
+
+  //export default {
+  //  computed: {
+  //    ...mapGetters({
+  //      categories: 'categories'
+  //      //cartCount: 'cart/count'
+  //    })
+  //  }
+  //}
+</script>-->
+
+<script>
+import { mapGetters } from 'vuex'
+  export default {
+    props: {
+      source: String,
+    },
+    data: () => ({
+      dialog: false,
+      drawer: null,
+    }),
+    computed: {
+      ...mapGetters({
+        categories: 'categories'
+        //cartCount: 'cart/count'
+      })
+    }
+  }
+</script>

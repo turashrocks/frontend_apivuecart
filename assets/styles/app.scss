@@ -1,0 +1,312 @@
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+
+$table-cell-padding: 2em 2em;
+$table-cell-border-width: 0;
+$table-background-color: transparent;
+
+$message-body-border: 0;
+
+body{
+    font-size: 0.85rem !important;
+}
+
+/**START Top Navigation**/
+
+//.v-toolbar__content, .v-toolbar__extension {
+  //padding-left: 0px !important;
+//}
+
+// div.toolbar__title span.hidden-sm-and-down a.nuxt-link-exact-active.nuxt-link-active{
+//   color: #fff!important;
+// }
+
+// .toolbar__title .v-application a{
+//  color: #fff!important;
+// }
+
+.v-btn__content a,
+span.white-header a{
+  color: #fff!important;
+}
+
+.v-expansion-panel-header{
+  padding: 2px 9px !important;
+  font-weight: 600 !important;
+}
+
+/**END Top Navigation**/
+
+/**START Left Sidebar**/
+.theme--light.v-navigation-drawer{
+  background-color: transparent!important;
+}
+
+.theme--light.v-expansion-panels .v-expansion-panel {
+  background-color: transparent!important;
+}
+/**.v-application--is-ltr .v-list-item__action:first-child, .v-application--is-ltr .v-list-item__icon:first-child {
+  margin-right: 5px !important;
+}
+
+div.v-expansion-panel.v-expansion-panel--active.v-item--active a.nuxt-link-exact-active.nuxt-link-active{
+  color: red!important;
+  font-weight: 800!important;
+}**/
+
+// button.v-expansion-panel-header.v-expansion-panel-header--active{
+//   background: orangered !important;
+// }
+
+/**END Left Sidebar**/
+/**a{
+    color: #000 !important;
+}
+
+.theme--dark.v-btn.v-btn--icon{
+    color: #000 !important;
+}
+
+.v-window__next, .v-window__prev{
+    background: transparent !important;
+}
+
+.v-toolbar__title a{
+    color: #000 !important;
+}**/
+button{
+    border-color: transparent !important;
+}
+
+button.v-expansion-panel-header{
+  color: #fff!important;
+}
+
+.v-toolbar{
+    box-shadow: none !important;
+}
+
+.theme--light.v-sheet{
+    background-color: none !important;
+}
+
+.v-navigation-drawer__border{
+    background-color: transparent !important;
+}
+
+.v-expansion-panel:before{
+    box-shadow: none !important;
+}
+
+.v-expansion-panel--active+.v-expansion-panel{
+    margin-top: 0px !important;
+}
+.v-expansion-panels:not(.v-expansion-panels--accordion)>.v-expansion-panel--active{
+    margin-top: 0px !important;
+}
+
+.theme--light.v-expansion-panels .v-expansion-panel:not(:first-child):after {
+    border-color: transparent !important;
+}
+
+// .v-expansion-panel--active,
+// .v-item--active{
+//     background: orange !important;
+// }
+
+.v-expansion-panel--active>.v-expansion-panel-header {
+    background: #5c5c5c !important;
+    min-height: auto !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    color: #fff !important;
+}
+
+.v-expansion-panel-header a{
+    color: #000 !important;
+}
+
+.v-expansion-panel--active>.v-expansion-panel-header a{
+    color: #fff !important;
+}
+
+.v-expansion-panel--active>.v-expansion-panel-header--active .v-expansion-panel-header__icon:not(.v-expansion-panel-header__icon--disable-rotate) .v-icon{
+    color: #fff !important;
+}
+
+// .mdi-chevron-down::before{
+//     color: #000 !important;
+// }
+
+.v-expansion-panel-content__wrap{
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    color: #fff!important;
+    font-weight: 600!important;
+}
+
+.v-expansion-panel-header a{
+  color: #fff!important;
+}
+
+// START Individual Producct CSS
+
+.v-content__wrap{
+    max-width: 100% !important;
+}
+
+@media (min-width: 1264px){
+    .v-content__wrap .container {
+        max-width: 100% !important;
+    }
+}
+@media (min-width: 1400px){
+    .v-content__wrap .container {
+        max-width: 100% !important;
+    }
+}
+@media (min-width: 960px){
+    .v-content__wrap .container {
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 1216px){
+    .v-content__wrap .container {
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 1024px){
+    .v-content__wrap .container {
+        max-width: 100% !important;
+    }
+}
+.card-carousel {
+    user-select: none;
+    position: relative;
+}
+
+.progressbar {
+    display: block;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    background-color: rgba(221, 221, 221, 0.25);
+    z-index: 1;
+}
+
+.progressbar > div {
+    background-color: rgba(255, 255, 255, 0.52);
+    height: 100%;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.thumbnail-image {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 2px;
+    // width:100% !important;
+}
+
+.thumbnail-image > img {
+    // width: 100%;
+    height: auto;
+    transition: all 250ms;
+}
+
+.thumbnail-image:hover > img,
+.thumbnail-image.active > img {
+    opacity: 0.6;
+    box-shadow: 2px 2px 6px 1px rgba(0,0,0, 0.5);
+}
+
+.card-img {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 0% 6.45% 0% 6.45%;
+}
+
+.card-img > img {
+    display: block;
+    margin: 0 auto;
+    // width:100%;
+}
+
+.actions {
+    font-size: 1.5em;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #585858;
+    padding: 0% 8% 0% 4.5%;
+}
+
+.actions > span {
+    cursor: pointer;
+    transition: all 250ms;
+}
+
+.actions > span.prev {
+    margin-left: 5px;
+}
+
+.actions > span.next {
+    margin-right: 5px;
+}
+
+.actions > span:hover {
+    color: #eee;
+}
+
+.v-data-table td, .v-data-table th{
+    padding-top: 10px 16px !important;
+}
+
+.minusplusnumber {
+    border:1px solid silver;
+    background-color: #FFF;
+    margin:0 5px 0 5px;
+    display:inline-block;
+    user-select: none;
+}
+.minusplusnumber div {
+    display:inline-block;
+}
+.minusplusnumber #field_container input {
+    width:50px;
+    text-align:center;
+    font-size:15px;
+    padding:3px;
+    border:none;
+}
+.minusplusnumber .mpbtn {
+    padding:3px 10px 3px 10px;
+    cursor:pointer;
+    border-radius:5px;
+}
+.minusplusnumber .mpbtn:hover {
+    background-color:#DDD;
+}
+.minusplusnumber .mpbtn:active {
+    background-color:#c5c5c5;
+}
+
+// END Individual Product CSS
+
+
+@import "components/_navigation";
+
+// Overide
+@import "~bulma/bulma"
